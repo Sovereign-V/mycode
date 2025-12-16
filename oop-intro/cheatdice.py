@@ -33,3 +33,10 @@ class Cheat_Loaded_Dice(Player): # inheritance of Player
                 self.dice[i] += 1
             i += 1
 
+# allows user to have an extra dice
+class Cheat_Extra_Dice(Player): # inheritance of Player
+    def cheat(self):
+        self.dice = [] # clears current dice
+        for i in range(4):  # make 4 rolls
+            self.dice.append(randint(1,6))   # 1 to 6 inclusive
+
